@@ -1,0 +1,27 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RotateSnake : MonoBehaviour
+{
+    public KeyCode pressUp;
+    public KeyCode pressDown;
+    public KeyCode pressLeft;
+    public KeyCode pressRight;
+    private void Start()
+    {
+        
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown (pressUp))
+            GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 0);
+        if (Input.GetKeyDown (pressDown))
+            GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 180);
+        if (Input.GetKeyDown (pressRight))
+            GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 90);
+        if (Input.GetKeyDown (pressLeft))
+            GetComponent<Transform>().eulerAngles = new Vector3(0, 0, -90);
+    }
+     
+}
